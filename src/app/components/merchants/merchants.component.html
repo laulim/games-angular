@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Merchants</mat-label>
+  <mat-select multiple (selectionChange)="handleMerchantChange($event)">
+    <mat-option *ngFor="let merch of merchants" [value]="merch.ID">{{
+      merch.Name
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>

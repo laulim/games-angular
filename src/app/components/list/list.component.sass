@@ -1,0 +1,46 @@
+.row
+  display: flex
+  flex-wrap: wrap
+  margin-right: -10px
+  margin-left: -10px
+
+  .game
+    padding-right: 10px
+    padding-left: 10px
+    flex-shrink: 0
+    flex-grow: 0
+    flex-basis: 100%
+    max-width: 100%
+    text-align: center
+    margin-bottom: 20px
+    @media ( min-width: 576px )
+      flex-basis: 50%
+      max-width: 50%
+    @media ( min-width: 768px )
+      flex-basis: 33.3333%
+      max-width: 33.3333%
+    @media ( min-width: 1200px )
+      flex-basis: 25%
+      max-width: 25%
+
+    
+    &__wrap 
+      background-color: rgba(255, 255, 255, 0.1)
+      border: 1px dashed #ccc
+      
+  .paginator
+    margin-right: 10px
+    flex: 1 1 auto
+
+  .sort 
+    flex: 1 1 auto
+    margin-left: 10px
+    background-color: #424242
+  .merchants
+    padding-right: 10px
+    padding-left: 10px
+    flex: 1 1 auto
+    background-color: #424242
+
+.bar 
+  margin-bottom: 20px

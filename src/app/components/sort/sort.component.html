@@ -1,0 +1,11 @@
+<div class="sort">
+  <div class="sort__label">Sort:</div>
+  <mat-button-toggle-group
+    name="Sort"
+    aria-label="Sort"
+    (change)="handlerChange($event)"
+  >
+    <mat-button-toggle value="ASC" checked="{{ true }}">ASC</mat-button-toggle>
+    <mat-button-toggle value="DESC">DESC</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

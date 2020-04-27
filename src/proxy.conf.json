@@ -1,0 +1,11 @@
+{
+  "/proxy": {
+    "target": "https://www.gbchip.com/api/v1/games",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/proxy": ""
+    }
+  }
+}

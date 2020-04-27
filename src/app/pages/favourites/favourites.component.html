@@ -1,0 +1,13 @@
+<h1>Favourites</h1>
+
+<div *ngIf="data.games.length; else emptyBlock">
+  <p>Found {{ gamesTotal }} games</p>
+  <app-list
+    [data]="data"
+    (changeGamesTotal)="changeGamesTotal($event)"
+  ></app-list>
+</div>
+
+<ng-template #emptyBlock>
+  Favourite games weren't found
+</ng-template>

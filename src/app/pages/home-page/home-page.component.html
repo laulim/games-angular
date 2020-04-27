@@ -1,0 +1,8 @@
+<h1>Home Page</h1>
+<app-search [search]="searchValueChange"></app-search>
+<p>Found {{ gamesTotal }} games</p>
+{{ searchValue }}
+<app-list
+  [data]="gamesData"
+  (changeGamesTotal)="changeGamesTotal($event)"
+></app-list>

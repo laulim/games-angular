@@ -1,0 +1,27 @@
+<div class="bar">
+  <a
+    uiSref="home"
+    uiSrefActive="active"
+    mat-stroked-button
+    color="accent"
+    class="link"
+    >Home</a
+  >
+  <a
+    uiSrefActive="active"
+    mat-stroked-button
+    class="link"
+    uiSref="category"
+    [uiParams]="{ slug: cat.menuId }"
+    *ngFor="let cat of categories"
+    >{{ cat.Name.en }}</a
+  >
+  <a
+    uiSref="favourite"
+    uiSrefActive="active"
+    mat-stroked-button
+    color="accent"
+    class="link"
+    >Favourite</a
+  >
+</div>

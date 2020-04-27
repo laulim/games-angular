@@ -1,0 +1,33 @@
+<div class="row bar">
+  <app-sort
+    class="sort"
+    [sort]="sort"
+    (sortChangeed)="onSortChange($event)"
+  ></app-sort>
+
+  <app-merchants
+    class="merchants"
+    [merchants]="merchants"
+    (merchantsChanged)="onMerchantsChange($event)"
+  ></app-merchants>
+
+  <app-pagiantor
+    [itemsPerPage]="itemsPerPage"
+    [currentPage]="currentPage"
+    [items]="gamesListFiltered.length"
+    (pageChanged)="onPageChange($event)"
+    class="paginator"
+  ></app-pagiantor>
+</div>
+
+<div class="row" *ngIf="gamesListToShow" [@gamesAnimation]="gamesListToShow">
+  <app-card
+    *ngFor="let game of gamesListToShow; let i = index"
+    [game]="game"
+    [favourites]="favourites"
+    [priorityList]="priorityList"
+    (toggleFavourites)="addToFavourites($event)"
+    (toggleToPriorityList)="addToPriorityList($event)"
+    class="game"
+  ></app-card>
+</div>

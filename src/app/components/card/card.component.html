@@ -1,0 +1,29 @@
+<mat-card class="game">
+  <img mat-card-image src="{{ game.ImageFullPath }}" alt="{{ game.Name.en }}" />
+  <mat-card-content class="game__content">
+    <mat-card-title>{{ game.Name.en }}</mat-card-title>
+  </mat-card-content>
+  <mat-card-actions class="game__actions">
+    <button mat-raised-button color="primary">Play</button>
+    <button
+      mat-icon-button
+      color="accent"
+      aria-label="Favourite"
+      title="Favourite"
+      (click)="toggleTofavourites()"
+    >
+      <mat-icon *ngIf="!isFavourites">favorite_border</mat-icon>
+      <mat-icon *ngIf="isFavourites">favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="accent"
+      aria-label="Priority"
+      title="Priority"
+      (click)="toggleToPriority()"
+    >
+      <mat-icon *ngIf="!isPriority">star_border</mat-icon>
+      <mat-icon *ngIf="isPriority">star</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
