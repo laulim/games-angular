@@ -1,4 +1,4 @@
-# GamesAngular (My firs Angualr App. Spent 2 days on it.)
+# GamesAngular (My first Angualr App. Spent 2 days on it.)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
